@@ -18,7 +18,7 @@ import com.example.demo.service.IProduitService;
 
 @RestController
 @RequestMapping("/api/produit")
-//No 'Access-Control-Allow-Origin' header is present on the requested resource
+// No 'Access-Control-Allow-Origin' header is present on the requested resource
 @CrossOrigin
 public class ProduitController {
 
@@ -42,9 +42,9 @@ public class ProduitController {
 		produitService.updateProduit(produit);
 	}
 
-	@DeleteMapping("/{ref}")
-	public void deleteProduit( @PathVariable String ref ) {
-		produitService.deleteProduit(ref);
+	@DeleteMapping("/{id}")
+	public void deleteProduit(@PathVariable Long id) {
+		produitService.deleteProduit(id);
 
 	}
 }
