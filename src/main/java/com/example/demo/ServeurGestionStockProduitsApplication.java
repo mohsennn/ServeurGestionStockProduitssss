@@ -11,8 +11,8 @@ import com.example.demo.entity.Produit;
 public class ServeurGestionStockProduitsApplication {
 
 	public static void main(String[] args) {
-//		ConfigurableApplicationContext ctx = SpringApplication.run(
-//				ServeurGestionStockProduitsApplication.class, args);
+		ConfigurableApplicationContext ctx = SpringApplication.run(
+				ServeurGestionStockProduitsApplication.class, args);
 //
 //		ProduitRepository produitRepository = ctx
 //				.getBean(ProduitRepository.class);
