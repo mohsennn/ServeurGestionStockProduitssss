@@ -19,7 +19,7 @@ import com.example.demo.service.IProduitService;
 @RestController
 @RequestMapping("/api/produit")
 // No 'Access-Control-Allow-Origin' header is present on the requested resource
-@CrossOrigin
+ @CrossOrigin
 public class ProduitController {
 
 	@Autowired

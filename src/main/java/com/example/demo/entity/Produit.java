@@ -7,26 +7,15 @@ import javax.persistence.Id;
 
 @Entity
 public class Produit {
+
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private Long id;
-	/**
-	 * @return the id
-	 */
-	public Long getId() {
-		return id;
-	}
-
-	/**
-	 * @param id the id to set
-	 */
-	public void setId(Long id) {
-		this.id = id;
-	}
-
+	
 	private String ref;
+	
 	private int quantite;
-
+	
 	private float prixUnitaire;
 
 	public Produit() {
@@ -34,25 +23,11 @@ public class Produit {
 		// TODO Auto-generated constructor stub
 	}
 
-	/**
-	 * @return the prixUnitaire
-	 */
-	public float getPrixUnitaire() {
-		return prixUnitaire;
-	}
-
-	/**
-	 * @param prixUnitaire the prixUnitaire to set
-	 */
-	public void setPrixUnitaire(float prixUnitaire) {
-		this.prixUnitaire = prixUnitaire;
-	}
-
-	public Produit(String ref, int quantite, float priUnitaire) {
+	public Produit(String ref, int quantite, float prixUnitaire) {
 		super();
 		this.ref = ref;
 		this.quantite = quantite;
-		this.prixUnitaire = priUnitaire;
+		this.prixUnitaire = prixUnitaire;
 	}
 
 	public String getRef() {
@@ -70,11 +45,23 @@ public class Produit {
 	public void setQuantite(int quantite) {
 		this.quantite = quantite;
 	}
- 
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#hashCode()
-	 */
+	public float getPrixUnitaire() {
+		return prixUnitaire;
+	}
+
+	public void setPrixUnitaire(float prixUnitaire) {
+		this.prixUnitaire = prixUnitaire;
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public void setId(Long id) {
+		this.id = id;
+	}
+
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -83,10 +70,6 @@ public class Produit {
 		return result;
 	}
 
-	/* (non-Javadoc)
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
-	// produit sont egaux si'ils ont la meme reference 
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -103,5 +86,6 @@ public class Produit {
 			return false;
 		return true;
 	}
-
+	
+	
 }
