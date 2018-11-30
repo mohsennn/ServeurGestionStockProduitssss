@@ -7,8 +7,8 @@ import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.PathVariable;
 
-import com.example.demo.ProduitRepository;
 import com.example.demo.entity.Produit;
+import com.example.demo.repository.ProduitRepository;
 
 @Service
 //car on a 2 classe qui implementent le meme interface don il faut prisiser et prioriser une implementation sur l'autre  
